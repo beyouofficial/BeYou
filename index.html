@@ -78,15 +78,10 @@
   .location.reverse > *{direction:ltr;}
   .loc-visual{position:relative; overflow:hidden;}
   .loc-visual .panel{width:100%; height:100%; min-height:640px;}
-  .white-panel{background:linear-gradient(160deg,#C9BFAF 0%,#8A7D6C 60%,#6B5D4C 100%); position:relative;}
-  .white-panel::before{
-    content:''; position:absolute; top:32%; left:14%; width:64px; height:64px; border:1px solid var(--bronze);
-    display:flex; align-items:center; justify-content:center; border-radius:2px;
-  }
-  .white-panel .sign{position:absolute; top:38%; left:14%; font-family:'Fraunces',serif; font-weight:500; font-size:clamp(30px,4vw,46px); letter-spacing:0.02em; color:var(--bronze);}
-  .wood-panel{background:linear-gradient(160deg,#E9E7E2 0%,#D2CFC8 55%,#F2F1EE 100%); position:relative;}
-  .wood-panel::before{content:''; position:absolute; bottom:32%; left:15%; right:35%; height:3px; background:#fff; box-shadow:0 0 30px 8px rgba(255,255,255,0.9);}
-  .wood-panel .sign{position:absolute; bottom:24%; left:15%; font-family:'Fraunces',serif; font-weight:400; font-size:clamp(22px,3vw,34px); letter-spacing:0.03em; color:#9B968D;}
+  .white-panel{background:linear-gradient(160deg,rgba(20,19,18,0.15),rgba(20,19,18,0.35)), url('https://d8j0ntlcm91z4.cloudfront.net/user_3Evsrl8HIBw0XO4wRE7dschGWuX/hf_20260706_125432_543433b8-172e-4256-839c-03a2dc2bce63.png') center/cover no-repeat; position:relative;}
+  .white-panel .sign{position:absolute; top:38%; left:14%; font-family:'Fraunces',serif; font-weight:500; font-size:clamp(30px,4vw,46px); letter-spacing:0.02em; color:#fff; text-shadow:0 2px 20px rgba(0,0,0,0.4);}
+  .wood-panel{background:linear-gradient(160deg,rgba(20,19,18,0.1),rgba(20,19,18,0.3)), url('https://d8j0ntlcm91z4.cloudfront.net/user_3Evsrl8HIBw0XO4wRE7dschGWuX/hf_20260706_125435_a36529a8-4f6e-4a3d-b944-c0205bbc2489.png') center/cover no-repeat; position:relative;}
+  .wood-panel .sign{position:absolute; bottom:24%; left:15%; font-family:'Fraunces',serif; font-weight:400; font-size:clamp(22px,3vw,34px); letter-spacing:0.03em; color:#fff; text-shadow:0 2px 20px rgba(0,0,0,0.4);}
   .loc-copy{padding:80px 64px; display:flex; flex-direction:column; justify-content:center;}
   .loc-copy .eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#948E82; margin-bottom:18px;}
   .loc-copy h3{font-size:clamp(28px,3.4vw,44px); font-weight:400; margin-bottom:20px;}
@@ -121,6 +116,10 @@
   .service-row .desc{font-size:14px; color:#948E82; margin-top:4px; font-family:'Sora',sans-serif;}
   .service-row .price{font-family:'IBM Plex Mono',monospace; font-size:13px; color:var(--near-black); white-space:nowrap;}
   @media (max-width:600px){ .service-row{grid-template-columns:36px 1fr; row-gap:8px;} .service-row .price{grid-column:2; text-align:left;} }
+
+  .treatment-strip{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:64px;}
+  .treatment-strip img{width:100%; height:280px; object-fit:cover; border-radius:2px; display:block;}
+  @media (max-width:700px){ .treatment-strip{grid-template-columns:1fr;} .treatment-strip img{height:220px;} }
 
   .contact{background:var(--near-black); color:var(--white); padding:160px 48px 100px; text-align:center;}
   .contact .eyebrow{font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#948E82; margin-bottom:20px;}
@@ -195,6 +194,10 @@
   <div class="services-head">
     <div class="eyebrow reveal">Treatments</div>
     <h2 class="reveal" style="transition-delay:0.05s;">Choose by outcome, not by trend.</h2>
+  </div>
+  <div class="treatment-strip">
+    <img class="reveal" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Evsrl8HIBw0XO4wRE7dschGWuX/hf_20260706_125441_4747c787-7409-493c-a551-e84baf569eac.png" alt="Facial treatment application" loading="lazy">
+    <img class="reveal" style="transition-delay:0.05s;" src="https://d8j0ntlcm91z4.cloudfront.net/user_3Evsrl8HIBw0XO4wRE7dschGWuX/hf_20260706_125446_ee3c23f7-9176-4b58-add0-1b6af7c85266.png" alt="Skin texture close-up" loading="lazy">
   </div>
   <div class="service-list">
     <div class="service-row reveal">
